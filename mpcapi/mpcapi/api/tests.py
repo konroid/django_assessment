@@ -27,7 +27,7 @@ class PostTests(APITestCase):
         response = self.client.get('/api/posts/9999/')
         #response.render()
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
-
+"""
     def test_200_PUT_posts(self):
         #
         # Checks post returns 200 when using put
@@ -43,6 +43,8 @@ class PostTests(APITestCase):
         response = self.client.put('/api/posts/1/', {'userId': '1', 'title': 'Title test', 'bdy': 'this is not going to work'})
         #response.render()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+"""        
+
 """
 #
 # Comments Tests
@@ -56,7 +58,7 @@ class CommentTests(APITestCase):
         #response.render()
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Comment.objects.count(), 1)
-
+"""
     def test_404_post(self):
         #
         # Checks comments returns 404 looking at non existant post
@@ -64,7 +66,7 @@ class CommentTests(APITestCase):
         response = self.client.get('/api/comments/9999/')
         #response.render()
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
-
+"""
     def test_200_PUT_comments(self):
         #
         # Checks comments returns 200 when using put
